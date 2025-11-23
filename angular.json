@@ -2,12 +2,11 @@
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
   "cli": {
-    "packageManager": "npm",
-    "analytics": "f52e0b22-08cf-49bf-b4bf-755c596fdabe"
+    "packageManager": "npm"
   },
   "newProjectRoot": "projects",
   "projects": {
-    "angular-basic-code": {
+    "angular-without-ssr": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -32,12 +31,7 @@
             ],
             "styles": [
               "src/styles.scss"
-            ],
-            "server": "src/main.server.ts",
-            "outputMode": "server",
-            "ssr": {
-              "entry": "src/server.ts"
-            }
+            ]
           },
           "configurations": {
             "production": {
@@ -67,10 +61,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "angular-basic-code:build:production"
+              "buildTarget": "angular-without-ssr:build:production"
             },
             "development": {
-              "buildTarget": "angular-basic-code:build:development"
+              "buildTarget": "angular-without-ssr:build:development"
             }
           },
           "defaultConfiguration": "development"
