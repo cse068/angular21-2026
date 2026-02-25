@@ -1,0 +1,36 @@
+<app-header></app-header>
+
+<main class="stopwatch-container" role="main">
+  <div class="stopwatch-card">
+    <h1>Stopwatch</h1>
+    
+    <div class="stopwatch-display">
+      <div class="time">{{ displayTime }}</div>
+    </div>
+
+    <div class="button-group">
+      <button 
+        class="btn btn-start" 
+        (click)="start()" 
+        [disabled]="isRunning"
+        aria-label="Start stopwatch">
+        ▶ Start
+      </button>
+      
+      <button 
+        class="btn btn-stop" 
+        (click)="stop()" 
+        [disabled]="!isRunning"
+        aria-label="Stop stopwatch">
+        ⏸ Stop
+      </button>
+      
+      <button 
+        class="btn btn-reset" 
+        (click)="reset()"
+        aria-label="Reset stopwatch">
+        🔄 Reset
+      </button>
+    </div>
+  </div>
+</main>

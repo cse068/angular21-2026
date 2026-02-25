@@ -1,0 +1,13 @@
+<header class="app-header" role="banner">
+    <a class="skip-link" href="#main">Skip to main content</a>
+    <div class="header-inner container">
+        <a class="brand" routerLink="/" aria-label="Home">⏱️ Stopwatch</a>
+
+        <nav class="main-nav" role="navigation" aria-label="Primary">
+            <ul>
+                <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a></li>
+                <li><a routerLink="/my-watch" routerLinkActive="active">Stopwatch</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
